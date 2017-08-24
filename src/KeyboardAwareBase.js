@@ -27,8 +27,8 @@ export default class KeyboardAwareBase extends Component {
   _addKeyboardEventListeners() {
     const KeyboardEventsObj = Keyboard || DeviceEventEmitter;
     this.keyboardEventListeners = [
-      KeyboardEventsObj.addListener('keyboardWillShow', this._onKeyboardWillShow),
-      KeyboardEventsObj.addListener('keyboardWillHide', this._onKeyboardWillHide)
+      KeyboardEventsObj.addListener('keyboardDidShow', this._onKeyboardWillShow),
+      KeyboardEventsObj.addListener('keyboardDidHide', this._onKeyboardWillHide)
     ];
   }
   

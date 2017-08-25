@@ -11,22 +11,22 @@ export default class KeyboardAwareScrollView extends KeyboardAwareBase {
   render() {
     return (
       <ScrollView {...this.props} {...this.style}
-        contentInset={{bottom: this.state.keyboardHeight}}
         ref={(r) => {
           this._keyboardAwareView = r;
         }}
-        onLayout={(layoutEvent) => {
+        keyboardDismissMode={'on-drag'}
+        /*onLayout={(layoutEvent) => {
           this._onKeyboardAwareViewLayout(layoutEvent.nativeEvent.layout);
-        }}
-        onScroll={(event) => {
+        }}*/
+        /*onScroll={(event) => {
           this._onKeyboardAwareViewScroll(event.nativeEvent.contentOffset);
           if(this.props.onScroll) {
             this.props.onScroll(event);
           }
-        }}
-        onContentSizeChange={() => {
+        }}*/
+        /*onContentSizeChange={() => {
           this._updateKeyboardAwareViewContentSize();
-        }}
+        }}*/
         scrollEventThrottle={200}
       />
     );
